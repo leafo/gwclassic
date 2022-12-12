@@ -1,2 +1,5 @@
 *.lua
 .tup
+/dev_backup/
+*.compiled
+/logs/
