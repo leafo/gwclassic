@@ -218,6 +218,17 @@ ALTER SEQUENCE gwtemp.tutorials_id_seq OWNED BY gwtemp.tutorials.id;
 
 
 --
+-- Name: lapis_migrations; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.lapis_migrations (
+    name character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.lapis_migrations OWNER TO postgres;
+
+--
 -- Name: articles id; Type: DEFAULT; Schema: gwtemp; Owner: postgres
 --
 
@@ -271,6 +282,14 @@ ALTER TABLE ONLY gwtemp.tutorials
 
 
 --
+-- Name: lapis_migrations lapis_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lapis_migrations
+    ADD CONSTRAINT lapis_migrations_pkey PRIMARY KEY (name);
+
+
+--
 -- Name: idx_19268566_id; Type: INDEX; Schema: gwtemp; Owner: postgres
 --
 
@@ -303,6 +322,36 @@ CREATE INDEX idx_19268586_mgroup ON gwtemp.ivbmembers USING btree (mgroup);
 --
 
 CREATE INDEX idx_19268586_name ON gwtemp.ivbmembers USING btree (name);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.6
+-- Dumped by pg_dump version 14.6
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: lapis_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.lapis_migrations (name) FROM stdin;
+\.
 
 
 --
