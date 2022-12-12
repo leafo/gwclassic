@@ -4,4 +4,9 @@ class Layout extends require "views.widgets.base"
     html_5 {
       lang: "en"
     }, ->
-      @content_for "inner"
+      head ->
+        link rel: "icon", type: "image/gif", href: "/static/favicon.gif"
+        link rel: "stylesheet", href: "/static/main.css"
+
+      body ->
+        @content_for "inner"
