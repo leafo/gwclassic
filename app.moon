@@ -1,8 +1,9 @@
 lapis = require "lapis"
 
-class extends lapis.Application
-  "/": =>
-    import Articles from require "models"
-    tostring Articles\count!
+class GwClassic extends lapis.Application
+  layout: "widgets.layout"
 
+  [index: "/"]: true
+  [article: "/articles/:id[%d]"]: true
+  [articles: "/articles"]: true
 
