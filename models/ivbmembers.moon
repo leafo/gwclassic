@@ -1,4 +1,77 @@
 db = require "lapis.db"
 import Model from require "lapis.db.model"
 
+-- Generated schema dump: (do not edit)
+--
+-- CREATE TABLE gwtemp.ivbmembers (
+--   id integer DEFAULT 0 NOT NULL,
+--   name character varying(50) DEFAULT ''::character varying NOT NULL,
+--   mgroup smallint DEFAULT '0'::smallint NOT NULL,
+--   password character varying(32) DEFAULT ''::character varying NOT NULL,
+--   email character varying(60) DEFAULT ''::character varying NOT NULL,
+--   joined bigint DEFAULT '0'::bigint NOT NULL,
+--   ip_address character varying(16) DEFAULT ''::character varying NOT NULL,
+--   avatar character varying(128) DEFAULT NULL::character varying,
+--   avatar_size character varying(9) DEFAULT NULL::character varying,
+--   posts integer DEFAULT 0,
+--   aim_name character varying(40) DEFAULT NULL::character varying,
+--   icq_number character varying(40) DEFAULT NULL::character varying,
+--   location character varying(128) DEFAULT NULL::character varying,
+--   signature text,
+--   website character varying(70) DEFAULT NULL::character varying,
+--   yahoo character varying(32) DEFAULT NULL::character varying,
+--   title character varying(99) DEFAULT NULL::character varying,
+--   allow_admin_mails boolean,
+--   time_offset character varying(10) DEFAULT NULL::character varying,
+--   interests text,
+--   hide_email character varying(8) DEFAULT NULL::character varying,
+--   email_pm boolean,
+--   email_full boolean,
+--   skin smallint,
+--   warn_level bigint,
+--   warn_lastwarn bigint DEFAULT '0'::bigint NOT NULL,
+--   language character varying(32) DEFAULT NULL::character varying,
+--   msnname character varying(64) DEFAULT NULL::character varying,
+--   last_post bigint,
+--   restrict_post character varying(100) DEFAULT '0'::character varying NOT NULL,
+--   view_sigs boolean DEFAULT true,
+--   view_img boolean DEFAULT true,
+--   view_avs boolean DEFAULT true,
+--   view_pop boolean DEFAULT true,
+--   bday_day integer,
+--   bday_month integer,
+--   bday_year integer,
+--   new_msg smallint,
+--   msg_from_id integer,
+--   msg_msg_id bigint,
+--   msg_total smallint,
+--   vdirs text,
+--   show_popup boolean,
+--   misc character varying(128) DEFAULT NULL::character varying,
+--   last_visit bigint DEFAULT '0'::bigint,
+--   last_activity bigint DEFAULT '0'::bigint,
+--   dst_in_use boolean DEFAULT false,
+--   show_prefs character varying(19) DEFAULT '0;0;0;0;0;0;0;0;0;0'::character varying NOT NULL,
+--   view_prefs character varying(64) DEFAULT '-1&-1'::character varying,
+--   coppa_user boolean DEFAULT false,
+--   mod_posts character varying(100) DEFAULT '0'::character varying NOT NULL,
+--   auto_track boolean DEFAULT false,
+--   ignore_list bytea,
+--   phstate character varying(20) DEFAULT ''::character varying NOT NULL,
+--   org_supmod boolean DEFAULT false,
+--   org_perm_id character varying(255) DEFAULT ''::character varying,
+--   temp_ban character varying(100) DEFAULT NULL::character varying,
+--   integ_msg character varying(250) DEFAULT ''::character varying,
+--   avatar_mini character varying(20) DEFAULT ''::character varying NOT NULL,
+--   ban_reason character varying(90) DEFAULT ''::character varying NOT NULL,
+--   title_locked character varying(5) DEFAULT ''::character varying NOT NULL,
+--   peoplemember character varying(5) DEFAULT ''::character varying NOT NULL
+-- );
+-- ALTER TABLE ONLY gwtemp.ivbmembers
+--   ADD CONSTRAINT idx_19268586_primary PRIMARY KEY (id);
+-- CREATE INDEX idx_19268586_bday_day ON gwtemp.ivbmembers USING btree (bday_day);
+-- CREATE INDEX idx_19268586_bday_month ON gwtemp.ivbmembers USING btree (bday_month);
+-- CREATE INDEX idx_19268586_mgroup ON gwtemp.ivbmembers USING btree (mgroup);
+-- CREATE INDEX idx_19268586_name ON gwtemp.ivbmembers USING btree (name);
+--
 class Ivbmembers extends Model
