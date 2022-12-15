@@ -8,8 +8,8 @@ import Model from require "lapis.db.model"
 --   title character varying(50) DEFAULT NULL::character varying,
 --   summary text,
 --   body text,
---   author bigint,
---   date bigint,
+--   author_id bigint,
+--   created_at timestamp without time zone,
 --   topic_id bigint,
 --   feature character varying(10) DEFAULT ''::character varying NOT NULL,
 --   views bigint DEFAULT '0'::bigint NOT NULL,
@@ -20,3 +20,7 @@ import Model from require "lapis.db.model"
 -- CREATE INDEX idx_19268566_id ON gwtemp.articles USING btree (id);
 --
 class Articles extends Model
+  @relations: {
+    {"author", belongs_to: "Ivbmembers"}
+  }
+

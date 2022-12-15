@@ -7,3 +7,7 @@ class GwClassic extends lapis.Application
   [article: "/articles/:id[%d]"]: true
   [articles: "/articles"]: true
 
+
+  [tutorials: "/tutorials"]: true
+
+  [users: "/users"]: true
